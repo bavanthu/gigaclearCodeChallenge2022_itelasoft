@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AXcCL/NqMuHcekSvJPkvCaZCHiniuW+CzJmSvqombAKnctB83uoFEZYqJ+tzI8e5PpAESnxTFqIdpRKz2+e/Tg==",
+  "success": true,
+  "projectFilePath": "D:\\iTelaSoft\\gigaclear-code-challenge-c#-itelasoft-version\\gigaclearCodeChallenge_itelasoft\\Gigaclear_code_challenge\\Gigaclear_code_challenge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pc\\.nuget\\packages\\fluentcommandlineparser-netstandard\\1.4.3.13\\fluentcommandlineparser-netstandard.1.4.3.13.nupkg.sha512"
+  ],
+  "logs": []
+}

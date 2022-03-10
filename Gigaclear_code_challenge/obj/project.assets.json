@@ -1,0 +1,99 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FluentCommandLineParser-netstandard/1.4.3.13": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentCommandLineParser.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentCommandLineParser.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentCommandLineParser-netstandard/1.4.3.13": {
+      "sha512": "MQtF755bNo31t0JDTNb1IXfagmi+Mwq9B+FCH1c0nkxWiz53J5rwixWQQ/ireQAvneetyS8mbcVggwygORg4Mg==",
+      "type": "package",
+      "path": "fluentcommandlineparser-netstandard/1.4.3.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentcommandlineparser-netstandard.1.4.3.13.nupkg.sha512",
+        "fluentcommandlineparser-netstandard.nuspec",
+        "lib/net45/FluentCommandLineParser.dll",
+        "lib/net45/FluentCommandLineParser.xml",
+        "lib/netstandard2.0/FluentCommandLineParser.dll",
+        "lib/netstandard2.0/FluentCommandLineParser.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "FluentCommandLineParser-netstandard >= 1.4.3.13"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Pc\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\iTelaSoft\\gigaclear-code-challenge-c#-itelasoft-version\\gigaclearCodeChallenge_itelasoft\\Gigaclear_code_challenge\\Gigaclear_code_challenge.csproj",
+      "projectName": "Gigaclear_code_challenge",
+      "projectPath": "D:\\iTelaSoft\\gigaclear-code-challenge-c#-itelasoft-version\\gigaclearCodeChallenge_itelasoft\\Gigaclear_code_challenge\\Gigaclear_code_challenge.csproj",
+      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
+      "outputPath": "D:\\iTelaSoft\\gigaclear-code-challenge-c#-itelasoft-version\\gigaclearCodeChallenge_itelasoft\\Gigaclear_code_challenge\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "FluentCommandLineParser-netstandard": {
+            "target": "Package",
+            "version": "[1.4.3.13, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

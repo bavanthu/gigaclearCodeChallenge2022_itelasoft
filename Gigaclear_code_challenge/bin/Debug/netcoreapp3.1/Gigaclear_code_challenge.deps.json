@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Gigaclear_code_challenge/1.0.0": {
+        "dependencies": {
+          "FluentCommandLineParser-netstandard": "1.4.3.13"
+        },
+        "runtime": {
+          "Gigaclear_code_challenge.dll": {}
+        }
+      },
+      "FluentCommandLineParser-netstandard/1.4.3.13": {
+        "runtime": {
+          "lib/netstandard2.0/FluentCommandLineParser.dll": {
+            "assemblyVersion": "1.4.3.13",
+            "fileVersion": "1.4.3.13"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gigaclear_code_challenge/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentCommandLineParser-netstandard/1.4.3.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MQtF755bNo31t0JDTNb1IXfagmi+Mwq9B+FCH1c0nkxWiz53J5rwixWQQ/ireQAvneetyS8mbcVggwygORg4Mg==",
+      "path": "fluentcommandlineparser-netstandard/1.4.3.13",
+      "hashPath": "fluentcommandlineparser-netstandard.1.4.3.13.nupkg.sha512"
+    }
+  }
+}

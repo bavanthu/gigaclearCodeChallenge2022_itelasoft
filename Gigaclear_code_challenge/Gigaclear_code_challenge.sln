@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gigaclear_code_challenge", "Gigaclear_code_challenge.csproj", "{75564E0E-0446-4DF7-BC97-D04AF7B04DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gigaclear_code_challenge_unitTest", "..\Gigaclear_code_challenge_unitTest\Gigaclear_code_challenge_unitTest.csproj", "{F756D85C-B886-4DDA-B9DC-FB734006943E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75564E0E-0446-4DF7-BC97-D04AF7B04DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75564E0E-0446-4DF7-BC97-D04AF7B04DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75564E0E-0446-4DF7-BC97-D04AF7B04DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75564E0E-0446-4DF7-BC97-D04AF7B04DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F756D85C-B886-4DDA-B9DC-FB734006943E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F756D85C-B886-4DDA-B9DC-FB734006943E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F756D85C-B886-4DDA-B9DC-FB734006943E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F756D85C-B886-4DDA-B9DC-FB734006943E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E048ED6-F169-4BD6-A54A-6C46979C0778}
+	EndGlobalSection
+EndGlobal
