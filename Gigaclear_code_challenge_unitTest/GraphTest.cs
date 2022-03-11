@@ -227,7 +227,7 @@ namespace Gigaclear_code_challenge_unitTest
 
         public void SumOfCostsGigaclearNodeTypes(int numCabinets, int costCabinet, int numChambers, int costChamber, int numPots, int costPot, int totalCost)
         {
-            var rateCard = new RateCard { Cabinet = costCabinet, Pot = costPot, Chamber = costChamber };
+            var rateCard = new RateCard { CabinetRateCard = costCabinet, PotRateCard = costPot, ChamberRateCard = costChamber };
             var graph = new Graph();
             var n = 0;
             for (int i = 0; i < numCabinets; i++)
@@ -245,7 +245,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void SumOfCosts_Road_Edge()
         {
-            var rateCard = new RateCard { TrenchRoad = 6 };
+            var rateCard = new RateCard { TrenchRoadRateCard = 6 };
             var graph = new Graph();
             var n = 0;
             for (int i = 0; i < 10; i++)
@@ -263,7 +263,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void SumOfCostsVerge_Edge()
         {
-            var rateCard = new RateCard { TrenchVerge = 8 };
+            var rateCard = new RateCard { TrenchVergeRateCard = 8 };
             var graph = new Graph();
             var n = 0;
             for (int i = 0; i < 10; i++)
@@ -285,6 +285,7 @@ namespace Gigaclear_code_challenge_unitTest
         [TestCase("D", 350)]
         public void SumOfDistanceToCabinet_Node(string nodeId, int expectedDistance)
         {
+            //var graph = ReadDotFileHelper("A [type=Cabinet];B [type=Pot];C [type=Pot];D [type=Pot];E [type=Chamber];F [type=Chamber];G [type=Chamber];A -- E  [length=50, material=verge];B -- E  [length=20, material=verge];C -- F  [length=50, material=road];D -- G  [length=100, material=road];E -- F  [length=100, material=road];F -- G  [length=100, material=verge];");
             var graph = ReadDotFileHelper("A [type=Cabinet];B [type=Pot];C [type=Pot];D [type=Pot];E [type=Chamber];F [type=Chamber];G [type=Chamber];A -- E  [length=50, material=verge];B -- E  [length=20, material=verge];C -- F  [length=50, material=road];D -- G  [length=100, material=road];E -- F  [length=100, material=road];F -- G  [length=100, material=verge];");
 
             var distance = graph.LengthOfCabinetFromNode(graph.GetNodeById(nodeId));
