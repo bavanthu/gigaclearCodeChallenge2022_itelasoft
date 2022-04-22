@@ -12,7 +12,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void NewEmptyGraph()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
 
             Assert.That(graph.Nodes.Count, Is.EqualTo(0));
             Assert.That(graph.Edges.Count, Is.EqualTo(0));
@@ -21,7 +21,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendNode()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var node = new GigaclearNode("A", GigaclearNodeType.Cabinet);
 
             graph.AppendNode(node);
@@ -34,7 +34,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendStartNode()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var nodeA = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             var nodeB = new GigaclearNode("B", GigaclearNodeType.Cabinet);
             graph.AppendNode(nodeA);
@@ -46,7 +46,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendSecondNode()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var nodeA = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             graph.AppendNode(nodeA);
             var nodeB = new GigaclearNode("B", GigaclearNodeType.Cabinet);
@@ -61,7 +61,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendDuplicateNode()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var node = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             graph.AppendNode(node);
 
@@ -75,7 +75,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendEdge()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var nodeA = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             var nodeB = new GigaclearNode("B", GigaclearNodeType.Cabinet);
             graph.AppendNode(nodeA);
@@ -92,7 +92,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendSecondEdge()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var nodeA = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             var nodeB = new GigaclearNode("B", GigaclearNodeType.Cabinet);
             var nodeC = new GigaclearNode("C", GigaclearNodeType.Cabinet);
@@ -113,7 +113,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendDuplicateEdge()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var nodeA = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             var nodeB = new GigaclearNode("B", GigaclearNodeType.Cabinet);
             graph.AppendNode(nodeA);
@@ -133,7 +133,7 @@ namespace Gigaclear_code_challenge_unitTest
         [Test]
         public void AppendMissedEdge_EndNode()
         {
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var nodeA = new GigaclearNode("A", GigaclearNodeType.Cabinet);
             var nodeB = new GigaclearNode("B", GigaclearNodeType.Cabinet);
             graph.AppendNode(nodeB);
@@ -228,7 +228,7 @@ namespace Gigaclear_code_challenge_unitTest
         public void SumOfCostsGigaclearNodeTypes(int numCabinets, int costCabinet, int numChambers, int costChamber, int numPots, int costPot, int totalCost)
         {
             var rateCard = new RateCard { CabinetRateCard = costCabinet, PotRateCard = costPot, ChamberRateCard = costChamber };
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var n = 0;
             for (int i = 0; i < numCabinets; i++)
                 graph.AppendNode(new GigaclearNode((++n).ToString(), GigaclearNodeType.Cabinet));
@@ -246,7 +246,7 @@ namespace Gigaclear_code_challenge_unitTest
         public void SumOfCosts_Road_Edge()
         {
             var rateCard = new RateCard { TrenchRoadRateCard = 6 };
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var n = 0;
             for (int i = 0; i < 10; i++)
                 graph.AppendNode(new GigaclearNode((++n).ToString(), GigaclearNodeType.Chamber));
@@ -264,7 +264,7 @@ namespace Gigaclear_code_challenge_unitTest
         public void SumOfCostsVerge_Edge()
         {
             var rateCard = new RateCard { TrenchVergeRateCard = 8 };
-            var graph = new Graph();
+            var graph = new ProcessGraphFile();
             var n = 0;
             for (int i = 0; i < 10; i++)
                 graph.AppendNode(new GigaclearNode((++n).ToString(), GigaclearNodeType.Chamber));
@@ -293,12 +293,12 @@ namespace Gigaclear_code_challenge_unitTest
             Assert.That(distance, Is.EqualTo(expectedDistance));
         }
 
-        private Graph ReadDotFileHelper(string dotFileLines)
+        private ProcessGraphFile ReadDotFileHelper(string dotFileLines)
         {
-            string contents = $"strict graph \"\" {{\r\n{dotFileLines}\r\n}}\r\n";
+            string contents = $"strict processgraphfile \"\" {{\r\n{dotFileLines}\r\n}}\r\n";
             string filename = Path.GetTempFileName();
             File.WriteAllText(filename, contents);
-            return Graph.ReadDotFile(filename);
+            return Graphml.eadGraphmlFile(filename);
         }
     }
 }

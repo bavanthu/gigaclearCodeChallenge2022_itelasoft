@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Gigaclear_code_challenge",
+    "\\Gigaclear_code_challenge_unitTest"
   ],
+  "SelectedNode": "\\Gigaclear_code_challenge\\ProcessGraphFile.cs",
   "PreviewInSolutionExplorer": false
 }

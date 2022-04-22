@@ -12,7 +12,7 @@
 
         public override string ToString()
         {
-            return $"Cabinet=£{CabinetRateCard}; Pot=£{PotRateCard}; Chamber=£{ChamberRateCard}; Trench road /m=£{TrenchRoadRateCard}; Trench verge /m=£{TrenchVerge}; Pot cost /m from cabinet=£{PotFromCabinetRateCard}* trench length from Cabinet";
+            return $"Cabinet=£{CabinetRateCard}; Pot=£{PotRateCard}; Chamber=£{ChamberRateCard}; Trench road /m=£{TrenchRoadRateCard}; Trench verge /m=£{TrenchVergeRateCard}; Pot cost /m from cabinet=£{PotFromCabinetRateCard}* trench length from Cabinet";
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Gigaclear_code_challenge
 
         public static void Run(Values arguments)
         {
-            var graph = Graph.ReadDotFile(arguments.Filename);
+            var graph = ProcessGraphFile.ReadGraphmlFile(arguments.Filename);
 
             Console.WriteLine($"Graph loaded with {graph.Nodes.Count} nodes and {graph.Edges.Count} edges.");
 
@@ -70,14 +70,14 @@ namespace Gigaclear_code_challenge
             else
             {
                 Console.WriteLine("--Rate card A--");
-                DisplayRatesForGraph(graph, new RateCard { Cabinet = 1000, TrenchVerge = 50, TrenchRoad = 100, Chamber = 200, Pot = 100 });
+                DisplayRatesForGraph(graph, new RateCard { CabinetRateCard = 1000, TrenchVergeRateCard = 50, TrenchRoadRateCard = 100, ChamberRateCard = 200, PotRateCard = 100 });
                 Console.WriteLine();
                 Console.WriteLine("--Rate card B--");
-                DisplayRatesForGraph(graph, new RateCard { Cabinet = 1200, TrenchVerge = 40, TrenchRoad = 80, Chamber = 200, PotFromCabinet = 20 });
+                DisplayRatesForGraph(graph, new RateCard { CabinetRateCard = 1200, TrenchVergeRateCard = 40, TrenchRoadRateCard = 80, ChamberRateCard = 200, PotFromCabinetRateCard = 20 });
             }
         }
 
-        private static void DisplayRatesForGraph(Graph graph, RateCard rateCard)
+        private static void DisplayRatesForGraph(ProcessGraphFile graph, RateCard rateCard)
         {
             Console.WriteLine("Using rates:");
             Console.WriteLine(rateCard.ToString());
